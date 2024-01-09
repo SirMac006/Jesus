@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: rgb(77, 74, 74);
+  color: white;
+}
+#header{
+  width: 100%;
+  height: 95vh;
+ 
+}
+.container{
+  padding: 10px 2%;
+  font-size: 40px;
+}
+nav{
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#logo{
+  width: 360px;
+  border-radius: 15px;
+}
+nav ul li{
+display: inline-block; 
+list-style: none;
+margin: 10px 20px
+}
+nav ul li a{
+color:white;
+text-decoration: none;
+font-size: 18px;
+position: relative;
+}
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background:red;
+  position:absolute;
+  left: 0;
+  bottom: -6px;
+  transition: .5s; /**/
+} 
+nav ul li a:hover::after{
+  width: 100%;
+}
+.header-text{
+  margin-top: 3%;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+.header-text h2{
+  font-size: 50px;
+  margin-top: 3px;
+  flex-wrap: wrap;
+}
+.header-text p{
+  color: white;
+  font-size: larger;
+  flex-wrap: wrap;
+}
+#About{
+  padding: 5px 0;
+  color: white;
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+#About-col-1 img{
+  width: 35%;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+#About-col-2{ 
+  flex-basis: 60%;
+  padding: 10px;
+}
+#skills{
+  padding: 10px 0;
+  display:flex;
+  flex-wrap: wrap;
+}
+#click-here img:hover{
+  border: red;
+  border-style: double;
+  border-width: 15px;
+  transform: translateY(-10px); 
+ }
+ #click-here img:hover::after{
+   position:absolute;
+   content: attr(title);
+   display:inline-block;
+   left: 0px;
+   top: 0px;
+   padding: 0px;
+   background-color: white;
+   color: blue;
+ }
+ .card img {
+  width: 100%;
+  max-width: 200px;
+}
+a img{
+width: 100%;
+max-width: 600px;
+}
+
+.card {
+  flex: 1 0 0;
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#contact-me{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+@media screen and (max-width:1425px){
+  #About-col-1{
+    max-width: 135%
+  }
+  #click-here{
+    max-width: 55%;
+  }
+}
